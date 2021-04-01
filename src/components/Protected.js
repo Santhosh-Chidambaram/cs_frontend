@@ -5,7 +5,7 @@ export default function Protected({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const history = useHistory();
   useEffect(() => {
-    if (!localStorage.getItem("cookie")) {
+    if (!localStorage.getItem("token")) {
       history.push("/");
     }
     setIsLoading(false);
